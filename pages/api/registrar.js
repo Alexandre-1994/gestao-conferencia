@@ -16,7 +16,7 @@ export default async function handler(req, res) {
          return res.status(500).json({ message: "Erro na conexão com o Supabase", error: testError.message });
        }
        
-       // Insere os dados
+       // Insere os dados /
        const { data, error } = await supabase
          .from('participantes')
          .insert([{ nome, cargo, paroquia, regiao }]);
