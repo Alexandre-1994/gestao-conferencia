@@ -6,7 +6,7 @@ export default async function handler(req, res) {
      
      try {
        // Teste de conexão: tentar buscar dados da tabela
-       const { data: testData, error: testError } = await supabase
+       const {  error: testError } = await supabase
          .from('participantes')
          .select('*')
          .limit(1);
